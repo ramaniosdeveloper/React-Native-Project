@@ -1,14 +1,14 @@
 import { router } from "expo-router";
 import {
-    FlatList,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 const items = [
-  { id: "1", title: "Daily overview", description: "Review your latest activity." },
+  { id: "1", title: "User Profile1", description: "Review your latest activity." },
   { id: "2", title: "Tasks", description: "Keep track of what needs attention." },
   { id: "3", title: "Messages", description: "See your recent conversations." },
   { id: "4", title: "Calendar", description: "Check upcoming events and plans." },
