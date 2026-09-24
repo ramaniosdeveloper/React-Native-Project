@@ -41,9 +41,11 @@ export default function HomeScreen() {
         renderItem={({ item }) => (
           <Pressable
             style={({ pressed }) => [styles.item, pressed && styles.itemPressed]}
-            onPress={() => {
+  onPress={() => {
   if (item.id === "1") {
     router.push("/user-profile");
+  } else if (item.id === "2") {
+    router.push("/tasks");
   } else {
     router.push({
       pathname: "/item/[id]",

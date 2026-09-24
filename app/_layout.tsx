@@ -19,6 +19,20 @@ export default function RootLayout() {
       />
 
       <Stack.Screen
+        name="tasks"
+        options={{
+          title: "Tasks",
+        }}
+      />
+
+      <Stack.Screen
+        name="user-profile"
+        options={{
+          title: "User Profile",
+        }}
+      />
+
+      <Stack.Screen
         name="item/[id]"
         options={{
           title: "Item",
