@@ -8,7 +8,7 @@ import {
 } from "react-native";
 
 const items = [
-  { id: "1", title: "User Profile1", description: "Review your latest activity." },
+  { id: "1", title: "User Profile", description: "Review your latest activity." },
   { id: "2", title: "Tasks", description: "Keep track of what needs attention." },
   { id: "3", title: "Messages", description: "See your recent conversations." },
   { id: "4", title: "Calendar", description: "Check upcoming events and plans." },
@@ -41,9 +41,16 @@ export default function HomeScreen() {
         renderItem={({ item }) => (
           <Pressable
             style={({ pressed }) => [styles.item, pressed && styles.itemPressed]}
-            onPress={() =>
-              router.push({ pathname: "/item/[id]", params: { id: item.id } })
-            }
+            onPress={() => {
+  if (item.id === "1") {
+    router.push("/user-profile");
+  } else {
+    router.push({
+      pathname: "/item/[id]",
+      params: { id: item.id },
+    });
+  }
+}}
             accessibilityRole="button"
           >
             <View style={styles.itemText}>
